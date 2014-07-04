@@ -266,10 +266,10 @@ static SIAlertView *__si_alert_current_view;
 	return self;
 }
 
-+ (SIAlertView *)simpleAlertWithMessage:(NSString *)message {
-	SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:nil andMessage:message];
++ (SIAlertView *)simpleAlertWithTitle:(NSString *)title andMessage:(NSString *)message {
+	SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:title andMessage:message];
 	[alertView addButtonWithTitle:@"Ok"
-							 type:SIAlertViewButtonTypeCancel
+							 type:SIAlertViewButtonTypeDestructive
 						  handler:nil];
 	return alertView;
 }
